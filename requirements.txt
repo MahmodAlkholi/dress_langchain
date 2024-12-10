@@ -1,0 +1,11 @@
+langchain
+langchain_community
+langchain_experimental
+langchain-google-genai
+langchain-groq
+langchain_openai
+openai
+tabulate
+chromadb
+streamlit
+python-dotenv

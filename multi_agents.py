@@ -11,11 +11,14 @@ from langsmith.wrappers import wrap_openai
 import os
 from dotenv import load_dotenv
 load_dotenv()
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+langchain_api_key = st.secrets["LANGCHAIN_API_KEY"]
+langchain_project = st.secrets["LANGCHAIN_PROJECT"]
 
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+#os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+#os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"] = "True"
-os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT")
+#os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT")
 grok_api_key = os.getenv("GROQ_API_KEY")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
